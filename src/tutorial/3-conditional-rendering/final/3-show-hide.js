@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const ShowHide = () => {
+	console.log("ShowHide");
 	const [show, setShow] = useState(false);
 	return (
 		<>
@@ -18,6 +19,7 @@ const Item = () => {
 	const [size, setSize] = useState(window.innerWidth);
 
 	const checkSize = () => {
+		console.log("CheckSize");
 		setSize(window.innerWidth);
 	};
 
@@ -26,7 +28,7 @@ const Item = () => {
 		// every time we toggle the component, it will add EventListener to window
 		// so even we use dependency array , we need cleanup function
 		// so when we remove the component from the DOM using toggle  {show && <Item />} ,
-		// it will call cleanup function 
+		// it will call cleanup function
 
 		window.addEventListener("resize", checkSize);
 		return () => {

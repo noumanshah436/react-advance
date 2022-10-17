@@ -12,7 +12,7 @@ const ShortCircuit = () => {
 	return (
 		<>
 			{/* <h1>{firstValue}</h1>
-      <h1>value : {secondValue}</h1>  
+      <h1>value : {secondValue}</h1>
        {if(){console.log('hello world')}} */}
 
 			{/* short-circuit evaluation */}
@@ -41,7 +41,7 @@ export default ShortCircuit;
 
 /*
 
-Short - Circuit Evaluation 
+Short - Circuit Evaluation
 (we can check it in console log )
 
 ****************
@@ -52,7 +52,7 @@ Short - Circuit Evaluation
 
 10 || 12  =>  10
 
-'' || 'Nouman'  =>   "Nouman"  
+'' || 'Nouman'  =>   "Nouman"
 
 'User' || 'Nouman' =>  "User"
 

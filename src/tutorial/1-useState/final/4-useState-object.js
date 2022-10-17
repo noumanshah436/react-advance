@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const UseStateObject = () => {
 
-  // creating useState 
+  // creating useState
 	const [person, setPerson] = useState({
 		name: "peter",
 		age: 24,
@@ -28,3 +28,6 @@ const UseStateObject = () => {
 };
 
 export default UseStateObject;
+
+// ********************
+//  its important to preserve previous state value

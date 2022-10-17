@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+// import React, { useEffect } from 'react'
 import { useFetch } from './2-useFetch'
 
 // custom hooks allow us to reuse the functionality
@@ -10,13 +10,13 @@ const url = 'https://course-api.com/javascript-store-products'
 
 const Example = () => {
   console.log('start');
-  
+
   const { loading, products } = useFetch(url)
   console.log(products)
   console.log("render");
 
   // useEffect(() => {
-	// 	console.log("UseEffect of Example"); 
+	// 	console.log("UseEffect of Example");
 	// }, [ ]);
 
   return (

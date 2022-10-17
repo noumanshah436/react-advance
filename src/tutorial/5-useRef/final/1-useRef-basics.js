@@ -8,37 +8,43 @@ import React, { useEffect, useRef } from "react";
 // useRef mostly used to target DOM nodes/elements
 // useRef can be used with any html element
 
-
-
 const UseRefBasics = () => {
+  // crearing useRef
+  const refContainer = useRef(null);
+  const divContainer = useRef(null);
 
-	// crearing useRef
-	const refContainer = useRef(null);
-	const divContainer = useRef(null);
+  const handleSubmit = (e) => {
+    // console.log(e.target);
+    e.preventDefault();
+    console.log(refContainer.current.value);
+    console.log(divContainer.current);
+  };
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		console.log(refContainer.current.value);
-		console.log(divContainer.current);
-	};
+  useEffect(() => {
+		console.log("useEffect");
+    console.log(refContainer.current);
+    refContainer.current.focus();
+  }); // don't worry about about dependency array because useRef dont't re-render
 
-	useEffect(() => {
-		console.log(refContainer.current);
-		refContainer.current.focus();
-	}); // don't worry about about dependency array because useRef dont't re-render
+  return (
+    <>
+      <form className="form" onSubmit={handleSubmit}>
+        <div>
+          <input type="text" ref={refContainer} />
+        </div>
+        <button type="submit">submit</button>
+      </form>
 
-	return (
-		<>
-			<form className="form" onSubmit={handleSubmit}>
-				<div>
-					<input type="text" ref={refContainer} />
+      <div ref={divContainer}>
+				Hello World
 				</div>
-				<button type="submit">submit</button>
-			</form>
-
-			<div ref={divContainer}>Hello World</div>
-		</>
-	);
+    </>
+  );
 };
 
 export default UseRefBasics;
+
+// ********************
+
+
+// add attribute 'ref' to element and grab that element by ---Container.current

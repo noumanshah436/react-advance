@@ -40,7 +40,7 @@ const List = () => {
 };
 
 const SinglePerson = ({ id, name }) => {
-	const { removePerson } = useContext(PersonContext);
+	const { removePerson } = useContext(PersonContext);  // destructuring
 
 	return (
 		<div className="item">

@@ -10,6 +10,7 @@ const ControlledInputs = () => {
 	const [people, setPeople] = useState([]);
 
 	const handleChange = (e) => {
+		console.log(e.target)
 		const name = e.target.name; // name of the input tag
 		const value = e.target.value;
 
@@ -19,7 +20,7 @@ const ControlledInputs = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-    
+
 		if (person.firstName && person.email && person.age) {
 			const newPerson = { ...person, id: new Date().getTime().toString() };
 			setPeople([...people, newPerson]);

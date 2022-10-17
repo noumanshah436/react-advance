@@ -4,7 +4,7 @@ import { data } from "../../../data";
 // fix - context api, redux (for more complex cases)
 
 const PropDrilling = () => {
-	
+
 	const [people, setPeople] = useState(data);
 
 	const removePerson = (id) => {
@@ -21,7 +21,7 @@ const PropDrilling = () => {
 	);
 };
 
-const List = ({ people, removePerson }) => {
+const List = ({ people, removePerson }) => {   // destructure props directly
 	return (
 		<>
 			{people.map((person) => {
@@ -60,7 +60,7 @@ Prop Drilling:
 To pass  removePerson  function to SinglePerson component we need to pass it to all
 the predecessor of that component and then we destructure it in all these components.
 
-First we pass removePerson  to List component , which further pass it to 
+First we pass removePerson  to List component , which further pass it to
 SinglePerson and that will use that function , this is called prop drilling.
 
 We need to pass that function from root componentn down to that component that is looking for that function.

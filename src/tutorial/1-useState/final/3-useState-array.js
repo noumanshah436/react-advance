@@ -33,3 +33,9 @@ const UseStateArray = () => {
 };
 
 export default UseStateArray;
+
+
+// *************************
+
+// show people list with remove button and
+// clear button

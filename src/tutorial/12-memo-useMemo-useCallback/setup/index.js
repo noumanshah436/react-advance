@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react'
+import React, { useState, useEffect } from 'react'
+// import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import { useFetch } from '../../9-custom-hooks/final/2-useFetch'
 
 // ATTENTION!!!!!!!!!!
@@ -22,15 +23,19 @@ const Index = () => {
   )
 }
 
-const BigList = ({ products }) => {
+const BigList = React.memo(({ products }) => {
+  useEffect(() => {
+    console.count('hello from big list');
+  });
+
   return (
-    <section className='products'>
+    <section className="products">
       {products.map((product) => {
-        return <SingleProduct key={product.id} {...product}></SingleProduct>
+        return <SingleProduct key={product.id} {...product}></SingleProduct>;
       })}
     </section>
-  )
-}
+  );
+});
 
 const SingleProduct = ({ fields }) => {
   let { name, price } = fields

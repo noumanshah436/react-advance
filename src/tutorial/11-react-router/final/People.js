@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { data } from '../../../data';
 import { Link } from 'react-router-dom';
 const People = () => {
-  const [people, setPeople] = useState(data);
+  const [people] = useState(data);
   return (
     <div>
       <h1>People Page</h1>

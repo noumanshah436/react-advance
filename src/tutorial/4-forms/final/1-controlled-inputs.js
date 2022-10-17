@@ -36,52 +36,53 @@ const ControlledInputs = () => {
 	};
 
 	return (
-		<>
-			<article>
-				<form className="form" onSubmit={handleSubmit}>
-					<div className="form-control">
-						{/* htmlFor takes id of the input */}
-						<label htmlFor="firstName">Name : </label>
-						<input
-							type="text"
-							id="firstName"
-							name="firstName"
-							value={firstName}
-							onChange={(e) => setFirstName(e.target.value)}
-						/>
-					</div>
+    <>
+      <article>
+        <form className="form" onSubmit={handleSubmit}>
+          <div className="form-control">
+            {/* htmlFor takes id of the input */}
+            <label htmlFor="firstName">Name : </label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+          </div>
 
-					<div className="form-control">
-						<label htmlFor="email">Email : </label>
-						<input
-							type="email"
-							id="email"
-							name="email"
-							value={email}
-							onChange={(e) => setEmail(e.target.value)}
-						/>
-					</div>
+          <div className="form-control">
+            <label htmlFor="email">Email : </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-					<button type="submit">add person</button>
-					{/* submit button will reload the page on submit , so we will prevent it  */}
-				</form>
+          {/* submit button will reload the page on submit , so we will prevent it  */}
+          <button type="submit">add person</button>
+          {/* <button type="submit" onClick={handleSubmit}>add person </button> */}
+        </form>
 
-				{/*
-        1) we can use onSubmit={handleSubmit} on form 
+        {/*
+        1) we can use onSubmit={handleSubmit} on form
         2) or we can add onClick={handleSubmit} on the submit button */}
 
-				{people.map((person, index) => {
-					const { id, firstName, email } = person;
-					return (
-						<div className="item" key={id}>
-							<h4>{firstName}</h4>
-							<p>{email}</p>
-						</div>
-					);
-				})}
-			</article>
-		</>
-	);
+        {people.map((person, index) => {
+          const { id, firstName, email } = person;
+          return (
+            <div className="item" key={id}>
+              <h4>{firstName}</h4>
+              <p>{email}</p>
+            </div>
+          );
+        })}
+      </article>
+    </>
+  );
 };
 
 export default ControlledInputs;

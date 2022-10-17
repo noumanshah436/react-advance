@@ -1,6 +1,6 @@
 import React, { useState, useReducer } from "react";
 import Modal from "./Modal";
-import { data } from "../../../data";
+// import { data } from "../../../data";
 // reducer function:
 //    Takes the old state and give back the new state
 //    You must return the new state from the reducer
@@ -32,7 +32,8 @@ const Index = () => {
 			// we can only control the state when we dispatch the action
 			// and then in reducer , we deal with our state
 			//  so it is more structured, it is less prone to errors or bugs
-			dispatch({ type: "ADD_ITEM", payload: newItem });
+
+			dispatch({ type: "ADD_ITEM", payload: newItem });  // just a naming convention to pass more items to action-object as payload
 			setName("");
 		} else {
 			dispatch({ type: "NO_VALUE" });
@@ -57,9 +58,9 @@ const Index = () => {
 						onChange={(e) => setName(e.target.value)}
 					/>
 				</div>
-
-				<button type="submit">add </button>
+				<button type="submit">add</button>
 			</form>
+
 			{state.people.map((person) => {
 				return (
 					<div key={person.id} className="item">

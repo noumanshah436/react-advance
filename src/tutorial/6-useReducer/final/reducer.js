@@ -1,14 +1,14 @@
 export const reducer = (state, action) => {
-	// state : old state 
+	// state : old state
   // action : action object comming from dispatch function
 
 	if (action.type === "ADD_ITEM") {
-		const newPeople = [...state.people, action.payload];
+		const newPeople = [...state.people, action.payload];  
 
 		return {
       // to return new State you
-			// must always copy the previous state and 
-      // just override those properties you want to update 
+			// must always copy the previous state and
+      // just override those properties you want to update
 			...state,
 			people: newPeople,
 			isModalOpen: true,
