@@ -32,7 +32,14 @@ import React from "react";
 
 // import Final from "./tutorial/13-axios/final/my_axios_1";
 // import Final from "./tutorial/13-axios/final/my_axios_2";
-import Final from "./tutorial/13-axios/final/my_axios_with_async_await_best_way_5";
+// import Final from "./tutorial/13-axios/final/my_axios_with_async_await_best_way_5";
+
+// import Final from "./tutorial/14-other-hooks/1-useId/1-useId";
+// import Final from "./tutorial/14-other-hooks/2-useImperativeHandle/Parent";
+// import Final from "./tutorial/14-other-hooks/3-useLayoutEffect/1-useLayoutEffect";
+// import Final from "./tutorial/14-other-hooks/4-useDebugValue/useDebugValue";
+// import Final from "./tutorial/14-other-hooks/5-useDeferredValue/Test";
+import Final from "./tutorial/14-other-hooks/6-useTransition/Test";
 
 // npm start
 
@@ -41,6 +48,7 @@ function App() {
     <div className="container">
       {/* <Setup /> */}
       <Final />
+
     </div>
   );
 }
