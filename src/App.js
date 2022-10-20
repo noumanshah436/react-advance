@@ -1,7 +1,8 @@
 import React from "react";
 
 // we will import all components with same name i.e Setup and Final ( default export )
-// import Setup from "./tutorial/1-useState/setup/1-error-example";
+
+// import Final from "./tutorial/0-class-vs-functions";
 
 // import Final from "./tutorial/1-useState/final/1-error-example";
 // import Final from "./tutorial/1-useState/final/2-useState-basics";
@@ -39,7 +40,9 @@ import React from "react";
 // import Final from "./tutorial/14-other-hooks/3-useLayoutEffect/1-useLayoutEffect";
 // import Final from "./tutorial/14-other-hooks/4-useDebugValue/useDebugValue";
 // import Final from "./tutorial/14-other-hooks/5-useDeferredValue/Test";
-import Final from "./tutorial/14-other-hooks/6-useTransition/Test";
+// import Final from "./tutorial/14-other-hooks/6-useTransition/Test";
+
+import Final from "./components/App";
 
 // npm start
 
@@ -48,7 +51,6 @@ function App() {
     <div className="container">
       {/* <Setup /> */}
       <Final />
-
     </div>
   );
 }

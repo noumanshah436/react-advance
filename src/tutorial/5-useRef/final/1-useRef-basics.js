@@ -20,11 +20,13 @@ const UseRefBasics = () => {
     console.log(divContainer.current);
   };
 
+  // don't worry about about dependency array because useRef dont't re-render
   useEffect(() => {
-		console.log("useEffect");
+    console.log("useEffect");
     console.log(refContainer.current);
     refContainer.current.focus();
-  }); // don't worry about about dependency array because useRef dont't re-render
+    // console.log(divContainer.current)
+  });
 
   return (
     <>
@@ -35,9 +37,7 @@ const UseRefBasics = () => {
         <button type="submit">submit</button>
       </form>
 
-      <div ref={divContainer}>
-				Hello World
-				</div>
+      <div ref={divContainer}>Hello World</div>
     </>
   );
 };
@@ -45,6 +45,5 @@ const UseRefBasics = () => {
 export default UseRefBasics;
 
 // ********************
-
 
 // add attribute 'ref' to element and grab that element by ---Container.current

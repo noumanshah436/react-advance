@@ -2,7 +2,7 @@ import React, { useState, useCallback, useMemo } from "react";
 import { useFetch } from "../../9-custom-hooks/final/2-useFetch";
 
 // https://kentcdodds.com/blog/usememo-and-usecallback
- 
+
 const url = "https://course-api.com/javascript-store-products";
 
 // every time props or state changes, component re-renders
