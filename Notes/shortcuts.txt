@@ -1,6 +1,0 @@
-ES7 React/Redux/GraphQL/React-Native snippets
-prettier 
- 
-
-rafce
-Creates a React Functional Component with ES7 module system (ES7 React/Redux/GraphQL/React-Native snippets)

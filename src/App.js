@@ -21,6 +21,8 @@ import React from "react";
 
 // import Final from "./tutorial/4-forms/final/1-controlled-inputs";
 // import Final from "./tutorial/4-forms/final/2-multiple-inputs";
+import Final from "./tutorial/4-forms/react-hook-forms/Form";
+
 // import Final from "./tutorial/5-useRef/final/1-useRef-basics";
 // import Final from "./tutorial/6-useReducer/final";
 // import Final from "./tutorial/7-prop-drilling/final/1-prop-drilling";
@@ -42,15 +44,15 @@ import React from "react";
 // import Final from "./tutorial/14-other-hooks/5-useDeferredValue/Test";
 // import Final from "./tutorial/14-other-hooks/6-useTransition/Test";
 
-import Final from "./components/App";
+// import Final from "./components/App";
 
 // npm start
 
 function App() {
   return (
     <div className="container">
-      {/* <Setup /> */}
       <Final />
+      {/* <Setup /> */}
     </div>
   );
 }
